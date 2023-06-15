@@ -1,9 +1,7 @@
 package com.h2square.bookandbeantree
 
-import android.media.ImageReader
 import android.os.Bundle
 import android.util.Log
-import android.widget.ImageButton
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
@@ -23,11 +21,7 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
-import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material3.AlertDialogDefaults.shape
-import androidx.compose.material3.Button
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 
 import androidx.compose.material3.MaterialTheme
@@ -36,11 +30,7 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
-import androidx.compose.ui.Alignment.Companion.BottomEnd
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Brush
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.graphicsLayer
 
 
 import androidx.compose.ui.graphics.painter.Painter
@@ -56,7 +46,6 @@ import androidx.compose.ui.unit.sp
 import com.h2square.bookandbeantree.MainActivity.Companion.TAG
 import com.h2square.bookandbeantree.ui.theme.BookAndBeanTreeTheme
 import com.h2square.bookandbeantree.ui.theme.gaugeColor
-import com.h2square.bookandbeantree.ui.theme.gradientColors
 import com.h2square.bookandbeantree.ui.theme.levelTextColor
 
 import com.h2square.bookandbeantree.ui.theme.mainView
@@ -145,9 +134,9 @@ fun TextWithImageLayout(text: String, imageResId: Int) {
             ) {
                 Text(text = "")
 
-                IconButton(onClick = { Log.d(TAG, "ddddddd") }) {
+                IconButton(onClick = { Log.d(TAG, "되니?") }) {
                     Image(
-                        painter = painterResource(id = R.drawable.addbtn),
+                        painter = painterResource(id = R.drawable.add_btn),
                         contentDescription = null,
                         modifier = Modifier.size(50.dp)
 
@@ -165,7 +154,7 @@ fun TextWithImageLayout(text: String, imageResId: Int) {
 
 @Composable
 fun MainView() {
-    LazyColumn(modifier = Modifier
+    LazyColumn(modifier = Modifier.padding(20.dp)
         .fillMaxHeight()
         .background(mainView)
         .fillMaxHeight()) {
